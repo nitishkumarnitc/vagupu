@@ -1,0 +1,48 @@
+<div ng-init="greetUser()">
+
+  <md-grid-list
+    md-cols="1" md-cols-sm="2" md-cols-md="3" md-cols-gt-md="6"
+    md-row-height-gt-md="1:1" md-row-height="4:3"
+    md-gutter="2px" md-gutter-gt-sm="2px" >
+
+    <md-grid-tile
+      md-rowspan="2"
+      md-colspan="6"
+      md-colspan-sm="1"
+      md-colspan-xs="1"
+      style="background-color: #00b3ee">
+      <youtube-video style="padding: 15px" video-id="vagapuVideo"></youtube-video>
+      <md-grid-tile-footer layout="row" layout-align="center center"><h3 >
+        Tutors, On Demand and On Budget
+      </h3></md-grid-tile-footer>
+    </md-grid-tile>
+
+    <md-grid-tile
+      md-rowspan="2"
+      md-colspan="6"
+      md-colspan-sm="1"
+      md-colspan-xs="1"
+      style="background-color: #00b3ee" >
+
+      <h3>Hi {{firstName}}. </h3>
+      <br>
+      <br>
+      <!--<img style="height: 60px; width: 60px;" src="{{profilePic}}">
+-->
+
+      <h3 ng-click="causeError()"> Click Here to Generate Error which will get stored on server.</h3>
+
+      <md-grid-tile-footer layout="row" layout-align="center center"><h3 >
+        <em>
+          <strong>Note:</strong>  Error gets Stored at server so that developer can fix it.
+          <br>
+          <br>stacktrace.js is used to parse the error and firebase is used to store the error on server.
+          Look at the JavaScript console to
+          see the errors being reported.
+        </em>
+      </h3></md-grid-tile-footer>
+    </md-grid-tile>
+
+  </md-grid-list>
+
+</div>
