@@ -7,6 +7,8 @@
  * # $exceptionHandlerFactoryService
  * Factory in the vagupuApp.
  */
+
+/*Modifying $exceptionalHandler such that it parses and pushes the error to firebase server*/
 app.factory(
   "$exceptionHandler",
   [ /*Dependencies*/
@@ -77,6 +79,7 @@ app.factory(
             console.log("errback is "+err.message);
           };
 
+          //Getting StackTrace
           StackTrace.get().then(callback).catch(errback);
 
         } catch (loggingError) {

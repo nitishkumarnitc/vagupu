@@ -1,9 +1,9 @@
-<div layout-fill layout="column" layout-align="center center" ng-controller="LoginCtrl" ng-style="{'background-image':'url(./images/classroom.jpg)'}">
-  <md-card  class="md-whiteframe-8dp" style="width: 30%">
+<div layout="column" layout-align="center center" ng-controller="LoginCtrl" class="background-image">
+  <md-card  class="md-whiteframe-8dp login" >
     <md-toolbar>
       <div layout="column" layout-padding layout-align="center center">
         <div>
-          <md-icon class="logo">account_circle</md-icon>
+          <md-icon>account_circle</md-icon>
         </div>
         <div class="md-headline md-padding">Login Into Your Account</div>
       </div>
@@ -48,6 +48,11 @@
           </div>
           <div layout="row" layout-align="center center">
             <md-progress-circular  ng-if="startProgressSpinner" md-mode="indeterminate" ></md-progress-circular>
+          </div>
+          <div>
+            <p>
+              {{errorMessage}}
+            </p>
           </div>
         </md-input-container>
 

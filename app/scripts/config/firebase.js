@@ -1,7 +1,9 @@
 /**
  * Created by nitish on 5/11/17.
  */
-angular.module('vagupuApp').config(function () {
+
+/*This is the configuration for firebase setup*/
+app.config(function () {
   var config = {
     apiKey: "AIzaSyBZxVCWX9uuv_rBCvVFKIvUEixoRk6yME0",
     authDomain: "fblogin-4177f.firebaseapp.com",

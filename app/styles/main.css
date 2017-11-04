@@ -82,9 +82,18 @@ body {
   }
 }
 
+.background-image{
+  background-color: #31b0d5;
+  position: fixed;
+  top: 0;
+  left: 0;
+   /*Preserve aspet ratio */
+  min-width: 100%;
+  min-height: 100%;
+ /* background-image: url('../images/classroom.jpg');*/
 
-.login .logo {
-  font-size: 48px;
-  width: 48px;
-  height: 48px;
+}
+
+.login{
+  width: 30%;
 }

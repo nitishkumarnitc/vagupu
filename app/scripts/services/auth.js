@@ -7,6 +7,7 @@
  * # Auth
  * Factory in the vagupuApp.
  */
+
 /*
 * This factory service is used for firebase authentication*/
 

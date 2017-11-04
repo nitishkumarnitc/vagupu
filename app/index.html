@@ -6,6 +6,7 @@
     <base href="/">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
+    <!--Importing css files -->
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
@@ -21,30 +22,18 @@
     <link href="https://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet">
 
   </head>
-  <body ng-app="vagupuApp">
+  <body  ng-app="vagupuApp">
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <!-- Add your site or application content here -->
-   <!-- <div class="header">
-      <div class="navbar navbar-default" role="navigation">
-        <div class="container">
-          <div class="collapse navbar-collapse" id="js-navbar-collapse">
+    <div>
+     <div ng-view="">
 
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="#!/welcome">Welcome</a></li>
-              <li><a ng-href="#!/login">Login</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>-->
-
-    <div class="container-fluid">
-    <div ng-view=""></div>
+     </div>
     </div>
 
+    <!--Importing javascript files-->
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
