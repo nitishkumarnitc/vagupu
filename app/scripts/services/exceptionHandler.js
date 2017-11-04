@@ -62,7 +62,7 @@ app.factory(
             $log.error("Client side Error/stack trace is  : "+ data);
 
             //connecting with correct path on firebase and getting array on which stacktrace has to be pushed.
-            var path="error/"+$window.location.href.replace('#!/','')+"/"+deviceData.browser;
+            var path="error/"+$window.location.href.replace('#!/','').replace(/./g,'/')+"/"+deviceData.browser;
             var ref = firebase.database().ref(path);
             var dataArray = $firebaseArray(ref);
 
