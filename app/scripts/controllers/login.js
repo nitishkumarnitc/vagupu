@@ -19,8 +19,10 @@ angular.module('vagupuApp')
       $scope.authObj = Auth;
       //function for login using Email and Password Combination
       $scope.loginUsingEmail=function () {
+
         $scope.startProgressSpinner=true;
         $scope.errorMessage="";
+
         $scope.authObj.$signInWithEmailAndPassword($scope.user.email, $scope.user.password).then(function(firebaseUser) {
           $scope.startProgressSpinner=false;
           $location.path("/welcome");
@@ -46,6 +48,7 @@ angular.module('vagupuApp')
       $scope.loginUsingFacebook=function () {
         $scope.errorMessage="";
         $scope.authObj.$signInWithPopup("facebook").then(function(result) {
+          //console.log(result);
           $location.path("/welcome");
         }).catch(function(error) {
           $log.error("Authentication failed:", error);
