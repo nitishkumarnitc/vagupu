@@ -2,13 +2,13 @@
  * Created by nitish on 5/11/17.
  */
 /*Main routes of the application*/
-app.config(function ($routeProvider) {
+app.config(["$routeProvider",function ($routeProvider) {
 
   $routeProvider
     .when('/login', {
       templateUrl: 'views/login.html',
       controller: 'LoginCtrl',
-      controllerAs: 'login',
+      /*controllerAs: 'login',*/
       resolve: {
         // controller will not be loaded until $waitForSignIn resolves
         // Auth refers to our $firebaseAuth wrapper in the factory
@@ -21,7 +21,7 @@ app.config(function ($routeProvider) {
     .when('/welcome', {
       templateUrl: 'views/welcome.html',
       controller: 'WelcomeCtrl',
-      controllerAs: 'welcome',
+      /*controllerAs: 'welcome',*/
       resolve: {
         // controller will not be loaded until $requireSignIn resolves
         // Auth refers to our $firebaseAuth wrapper in the factory below
@@ -35,9 +35,10 @@ app.config(function ($routeProvider) {
     .otherwise({
       redirectTo: '/welcome'
     });
-})
+}]);
+
   /*We are here catching the user if he/she tries to access the route for which he/she is not authenticated  */
-  .run(["$rootScope", "$location", function($rootScope, $location) {
+  app.run(["$rootScope", "$location", function($rootScope, $location) {
     $rootScope.$on("$routeChangeError", function(event, next, previous, error) {
       // We can catch the error thrown when the $requireSignIn promise is rejected
       // and redirect the user back to the login page
